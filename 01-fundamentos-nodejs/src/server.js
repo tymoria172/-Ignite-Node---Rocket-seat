@@ -20,18 +20,6 @@ const server = http.createServer((req, res) => {
     return res.writeHead(201).end();
   }
 
-  if (method === "PUT" && url === "/users") {
-    return res.end("Atualização de Usuarios");
-  }
-
-  if (method === "PATCH" && url === "/users") {
-    return res.end("Edição de informação especifica no Usuario");
-  }
-
-  if (method === "DELETE" && url === "/users") {
-    return res.end("Remoção de Usuarios");
-  }
-
   return res.writeHead(404).end();
 });
 
